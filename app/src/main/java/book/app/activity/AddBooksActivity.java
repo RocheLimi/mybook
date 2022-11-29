@@ -24,6 +24,7 @@ public class AddBooksActivity extends AppCompatActivity implements View.OnClickL
     private EditText et_isbn;
 
     private Button btnAdd;
+    private Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +42,27 @@ public class AddBooksActivity extends AppCompatActivity implements View.OnClickL
         et_publisher = (EditText) findViewById(R.id.et_publisher);
         et_pub_time = (EditText) findViewById(R.id.et_pub_time);
 
+        btnBack= (Button) findViewById(R.id.btn_back);
         btnAdd = (Button) findViewById(R.id.btn_add);
+
         //设置按钮的点击事件
         btnAdd.setOnClickListener(this);
+        btnBack.setOnClickListener((View.OnClickListener) this);
     }
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_add:
+                addOrder();
+                break;
+            case R.id.btn_back:
+                this.finish();
+                break;
+        }
+    }
+
+    public void addOrder(){
         //当单击“添加”按钮时，获取添加信息
         String uuid = et_uuid.getText().toString().trim();
         String title = et_title.getText().toString().trim();
@@ -75,5 +90,4 @@ public class AddBooksActivity extends AppCompatActivity implements View.OnClickL
         book_db.close();
         finish();
     }
-
 }

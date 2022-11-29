@@ -26,6 +26,19 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="415dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/btn_delete_selector"
+            android:text="返回"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
     </LinearLayout>
 
 </RelativeLayout>

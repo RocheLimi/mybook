@@ -24,6 +24,7 @@ public class UpdateBooksActivity extends AppCompatActivity implements View.OnCli
     private EditText et_isbn;
 
     private Button btnEdit;
+    private Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,10 +44,12 @@ public class UpdateBooksActivity extends AppCompatActivity implements View.OnCli
         et_pub_time = (EditText) findViewById(R.id.et_pub_time);
 
         btnEdit= (Button) findViewById(R.id.btn_edit);
+        btnBack= (Button) findViewById(R.id.btn_back);
 
         //设置按钮的点击事件
         btnSearch.setOnClickListener((View.OnClickListener) this);
         btnEdit.setOnClickListener((View.OnClickListener) this);
+        btnBack.setOnClickListener((View.OnClickListener) this);
     }
 
     @Override
@@ -59,6 +62,9 @@ public class UpdateBooksActivity extends AppCompatActivity implements View.OnCli
                 break;
             case R.id.btn_edit:    //更新操作
                 updateOrder();
+                break;
+            case R.id.btn_back:    //返回操作
+                this.finish();
                 break;
         }
     }

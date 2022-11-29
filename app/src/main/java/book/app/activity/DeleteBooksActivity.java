@@ -23,6 +23,7 @@ public class DeleteBooksActivity extends AppCompatActivity implements View.OnCli
     private EditText et_isbn;
 
     private Button btnDelete;
+    private Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +43,12 @@ public class DeleteBooksActivity extends AppCompatActivity implements View.OnCli
         et_pub_time = (EditText) findViewById(R.id.et_pub_time);
 
         btnDelete= (Button) findViewById(R.id.btn_delete);
+        btnBack= (Button) findViewById(R.id.btn_back);
 
         //设置按钮的点击事件
         btnSearch.setOnClickListener((View.OnClickListener) this);
         btnDelete.setOnClickListener((View.OnClickListener) this);
+        btnBack.setOnClickListener((View.OnClickListener) this);
     }
 
     @Override
@@ -59,6 +62,9 @@ public class DeleteBooksActivity extends AppCompatActivity implements View.OnCli
 
             case R.id.btn_delete:
                 deleteOrder();      //删除操作
+                break;
+            case R.id.btn_back:
+                this.finish();
                 break;
         }
     }

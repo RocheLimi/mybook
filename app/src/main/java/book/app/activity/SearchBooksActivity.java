@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import java.util.List;
@@ -13,9 +15,10 @@ import book.app.R;
 import book.app.list.Book;
 import book.app.database.BookOperation;
 
-public class SearchBooksActivity extends AppCompatActivity{
+public class SearchBooksActivity extends AppCompatActivity implements View.OnClickListener{
     //定义组件
     ListView listView=null;
+    private Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,17 @@ public class SearchBooksActivity extends AppCompatActivity{
 
         //关闭数据库
         book_db.close();
+
+        btnBack= (Button) findViewById(R.id.btn_back);
+
+        //设置按钮的点击事件
+        btnBack.setOnClickListener((View.OnClickListener) this);
+    }
+
+    @Override
+    public void onClick(View v)
+    {
+        this.finish();
     }
 }
 

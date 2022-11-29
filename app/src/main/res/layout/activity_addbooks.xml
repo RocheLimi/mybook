@@ -12,18 +12,18 @@
         <TextView
             android:id="@+id/tv"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="60dp"
             android:gravity="center"
             android:text="添加图书"
             android:textColor="#516D2C"
-            android:textSize="30sp" />
+            android:textSize="20sp" />
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="20dp"
             android:src="@drawable/read" />
 
         <LinearLayout
@@ -250,15 +250,30 @@
 
         <Button
             android:id="@+id/btn_add"
-            android:layout_width="match_parent"
+            android:layout_width="415dp"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="35dp"
             android:background="@drawable/btn_selector"
             android:gravity="center"
             android:text="添加"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
 
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="415dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/btn_delete_selector"
+            android:text="返回"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
