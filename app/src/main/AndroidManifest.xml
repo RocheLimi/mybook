@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="book.app">
 
     <application
@@ -10,6 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".app.MainActivity" />
+        <activity android:name=".app.AboutActivity"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".app.WelcomeActivity"
             android:exported="true">

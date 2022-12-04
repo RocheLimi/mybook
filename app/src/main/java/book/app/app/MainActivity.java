@@ -11,7 +11,6 @@ import android.os.Bundle;
 
 import android.content.Intent;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -37,7 +36,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ListView lvLeftMenu;
 
     private Button btnAbout;
-    private Button btnSetting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,14 +47,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnUpdate = findViewById(R.id.btn_edit);
         btnSearch = findViewById(R.id.btn_search);
         btnAbout = findViewById(R.id.btn_about);
-        btnSetting = findViewById(R.id.btn_setting);
 
         btnAdd.setOnClickListener(this);
         btnDelete.setOnClickListener(this);
         btnUpdate.setOnClickListener(this);
         btnSearch.setOnClickListener(this);
         btnAbout.setOnClickListener(this);
-        btnSetting.setOnClickListener(this);
 
         toolbar  = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -100,12 +96,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivityForResult(intent3, 3);
                 break;
             case R.id.btn_about:
-                Intent intent4 = new Intent(MainActivity.this, SearchBooksActivity.class);
+                Intent intent4 = new Intent(MainActivity.this, AboutActivity.class);
                 startActivityForResult(intent4, 4);
-                break;
-            case R.id.btn_setting:
-                Intent intent5 = new Intent(MainActivity.this, SearchBooksActivity.class);
-                startActivityForResult(intent5, 5);
                 break;
             default:
                 break;
