@@ -7,5 +7,4 @@ public class Book {
     public String PUBLISHER;
     public String PUB_TIME;
     public String ISBN;
-    public String HAS_COVER;
 }

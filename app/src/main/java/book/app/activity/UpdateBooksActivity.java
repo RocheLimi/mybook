@@ -99,7 +99,7 @@ public class UpdateBooksActivity extends AppCompatActivity implements View.OnCli
         o.AUTHORS = et_authors.getText().toString().trim();
         o.ISBN = et_isbn.getText().toString().trim();
         o.PUBLISHER = et_publisher.getText().toString().trim();
-        o.PUB_TIME = et_authors.getText().toString().trim();
+        o.PUB_TIME = et_pub_time.getText().toString().trim();
 
         //创建数据库访问对象
         BookOperation book_db = new BookOperation(getApplicationContext());
@@ -108,10 +108,10 @@ public class UpdateBooksActivity extends AppCompatActivity implements View.OnCli
 
         long result = book_db.updateBooks(o);
         if (result > 0){
-            Toast.makeText(this, "删除成功", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "修改成功", Toast.LENGTH_SHORT).show();
         }
         else{
-            Toast.makeText(this, "删除失败", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "修改失败", Toast.LENGTH_SHORT).show();
         }
 
         book_db.close();        //关闭数据库

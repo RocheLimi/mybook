@@ -46,7 +46,7 @@ public class SearchBooksActivity extends AppCompatActivity implements View.OnCli
         String[] from={"uuid","title","authors","publisher","pub_time","isbn"};
 
         //定义布局控件ID
-        int[] to={R.id.tv_lst_uuid,R.id.tv_lst_title,R.id.tv_lst_publisher,R.id.tv_lst_pub_time,R.id.tv_lst_isbn};
+        int[] to={R.id.tv_lst_uuid,R.id.tv_lst_title,R.id.tv_lst_author,R.id.tv_lst_publisher};
         SimpleAdapter listItemAdapter=new SimpleAdapter(SearchBooksActivity.this,mOrderData,R.layout.item_list,from,to);
 
         //添加并显示

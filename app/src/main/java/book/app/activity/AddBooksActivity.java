@@ -69,7 +69,7 @@ public class AddBooksActivity extends AppCompatActivity implements View.OnClickL
         String authors = et_authors.getText().toString().trim();
         String isbn = et_isbn.getText().toString().trim();
         String publisher = et_publisher.getText().toString().trim();
-        String pub_time = et_authors.getText().toString().trim();
+        String pub_time = et_pub_time.getText().toString().trim();
 
         Book o = new Book();
         o.UUID = uuid;
